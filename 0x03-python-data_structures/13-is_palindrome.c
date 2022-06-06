@@ -1,37 +1,55 @@
 #include "lists.h"
 
 /**
- * is_palindome - Checks if a singly linked list is a palindrome
- * @head: pointer to pointer head of the list
- * Return: 0 if is not a palindrome
- * otherwise: 1.
+ * reverse_listint - Reverses a linked list
+ * @head: Pointer to address of a list
+ *
+ * Return: Pointer to the first node of reversed list
+ */
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *tmp, *current, *rev;
+
+	tmp = current = *head;
+	rev = NULL;
+	while (current)
+	{
+		tmp = tmp->next;
+		current->next = rev;
+		rev = current;
+		current = tmp;
+	}
+	return (rev);
+}
+
+/**
+ * is_palindrome - Checks if singly linked list is palindrome
+ * @head: Pointer to the first node
+ *
+ * Return: 1 if palindrome
+ * otherwise: 0
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *node;
-	int num[9999], count = 0, i = 0;
+	listint_t *slow, *fast, *rev, *current;
 
-	if ((!head) || (!*head))
-		return (1);
-
-	node = *head;
-	if (!node->next)
-		return (1);
-
-	while (node)
+	fast = slow = current = *head;
+	if (*head)
 	{
-		num[count] = node->n;
-		node = node->next;
-		count++;
+		while (fast && fast->next)
+		{
+			slow = slow->next;
+			fast = (fast->next)->next;
+		}
+		rev = slow = reverse_listint(&slow);
+		while (rev)
+		{
+			if (current->n != rev->n)
+				return (0);
+			current = current->next;
+			rev = rev->next;
+		}
+		reverse_listint(&slow);
 	}
-	count--;
-
-	while (count >= 0 && i <= count)
-	{
-		if (num[count] != num[i])
-			return (1);
-		count--;
-		i--;
-	}
-	return (0);
+	return (1);
 }
