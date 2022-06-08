@@ -7,6 +7,6 @@ def best_score(a_dictionary):
         if no score is round, the return value is none
         otherwise, the biggest value
     """
-    if a_dictionary:
-        return max(a_dictionary, key = a_dictionary.get)
-    return None
+    if not a_dictionary:
+        return None
+    return max(a_dictionary, key = a_dictionary.get)
