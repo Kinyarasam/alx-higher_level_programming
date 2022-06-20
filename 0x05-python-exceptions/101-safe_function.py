@@ -2,13 +2,15 @@
 import sys
 
 def safe_function(fct, *args):
-    """
+    """Executes a file safely
+
     Args:
-        fct:
-        args:
+        fct: function to execute
+        args: fct arguments
 
     Returns:
-        
+        None: if there's an error
+        otherwise: results of the call to fct
     """
     try:
         return fct(*args)
