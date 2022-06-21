@@ -13,4 +13,4 @@ Read or watch the below resources in the order presented.
 ## Resources
 
 #### Read or watch:
-> * [Object Oriented Programming]() (Read everything until the paragraph _"inheritance"_ excluded. You do NOT have to learn about class attributes, *`classmethod`* and `_staticmethod_` yet)
+> * [Object Oriented Programming]() (Read everything until the paragraph _"inheritance"_ excluded. You do NOT have to learn about class attributes, *`classmethod`* and _`staticmethod`_ yet)
