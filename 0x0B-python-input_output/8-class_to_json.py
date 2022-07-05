@@ -3,7 +3,7 @@
 """
 
 
-def class_to_join(obj):
+def class_to_json(obj):
     """returns the dictionary description with simple DSA
     (list, dictionary, string, integer and boolean)
     for JSON serialization of an object
