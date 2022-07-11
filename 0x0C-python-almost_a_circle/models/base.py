@@ -4,7 +4,7 @@
 
 class Base:
     """ Represents the base model
-    
+
     Attributes:
         __nb_objects (int): The number of instantiated Bases.
     """

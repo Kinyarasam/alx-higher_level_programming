@@ -14,7 +14,6 @@ class TestBase_instantiation(unittest.TestCase):
     Base class.
     """
 
-
     def test_no_arg(self):
         b1 = Base()
         b2 = Base()
@@ -67,7 +66,7 @@ class TestBase_instantiation(unittest.TestCase):
     def test_list_id(self):
         self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
 
-    def  test_tuple_id(self):
+    def test_tuple_id(self):
         self.assertEqual((1, 2, 3), Base((1, 2, 3)).id)
 
     def test_set_id(self):
