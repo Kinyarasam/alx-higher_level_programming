@@ -310,3 +310,23 @@ class TestSquare_order_of_initialization(unittest.TestCase):
     def test_x_before_y(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, "invalid x", "invalid y")
+
+
+class TestSquare_to_dictionary(unittest.TestCase):
+    """Unittests for testing to_dictionary method of the Square class."""
+
+    def test_to_dictionary_output(self):
+        s = Square(10, 2, 1, 1)
+        correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
+        self.assertDictEqual(correct, s.to_dictionary())
+
+    def test_to_dictionary_no_object_changes(self):
+        s1 = Square(10, 2, 1, 2)
+        s2 = Square(1, 2, 10)
+        s2.update(**s1.to_dictionary())
+        self.assertNotEqual(s1, s2)
+
+    def test_to_dictionary_arg(self):
+        s = Square(10, 10, 10, 10)
+        with self.assertRaises(TypeError):
+            s.to_dictionary(1)
