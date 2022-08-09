@@ -3,6 +3,8 @@
 import json
 import csv
 import turtle
+from random import randrange
+import time
 
 
 class Base:
