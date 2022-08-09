@@ -6,7 +6,6 @@ import turtle
 from random import randrange
 import time
 
-
 class Base:
     """ Represents the base model
 
@@ -148,11 +147,11 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Opens a Turtle window and draws rectangles and squares"""
-        t = turtle.Turtle()
-        t.color("beige")
+        # t = turtle.Turtle()
+        turtle.color("beige")
         turtle.bgcolor("white")
-        t.shape("circle")
-        t.pensize(4)
+        turtle.shape("circle")
+        turtle.pensize(4)
 
         for i in (list_rectangles + list_squares):
             t.penup()
@@ -165,7 +164,7 @@ class Base:
 
     @staticmethod
     def draw_rect(t, rect):
-        """Helper method that draws a Rectangleor Square"""
+        """Helper method that draws a Rectangle or Square"""
         t.penup()
         t.setpos(rect.x, rect.y)
         t.pendown()
