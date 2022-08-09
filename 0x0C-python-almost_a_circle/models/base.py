@@ -163,7 +163,7 @@ class Base:
 
     @staticmethod
     def draw_rect(t, rect):
-        """Helper method that draws a Rectangleor Square"""
+        """Helper method that draws a Rectangle or Square"""
         t.penup()
         t.setpos(rect.x, rect.y)
         t.pendown()
