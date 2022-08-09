@@ -147,7 +147,7 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Opens a Turtle window and draws rectangles and squares"""
-        # t = turtle.Turtle()
+        t = turtle.Turtle()
         turtle.color("beige")
         turtle.bgcolor("white")
         turtle.shape("circle")
