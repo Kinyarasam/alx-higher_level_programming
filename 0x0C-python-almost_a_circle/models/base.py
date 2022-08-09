@@ -2,7 +2,8 @@
 """ Defines a base model class """
 import json
 import csv
-import turtle
+from turtle import *
+# import turtle
 
 
 class Base:
@@ -146,11 +147,11 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Opens a Turtle window and draws rectangles and squares"""
-        t = turtle.Turtle()
-        t.color("beige")
+        # t = turtle.Turtle()
+        turtle.color("beige")
         turtle.bgcolor("white")
-        t.shape("circle")
-        t.pensize(4)
+        turtle.shape("circle")
+        turtle.pensize(4)
 
         for i in (list_rectangles + list_squares):
             t.penup()
