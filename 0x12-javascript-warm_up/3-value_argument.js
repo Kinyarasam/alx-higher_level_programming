@@ -1,4 +1,6 @@
 #!/usr/bin/node
 // Script that prints the first argument passed to it:
+let output;
 
-(process.argv[2] ? console.log(process.argv[2]) : console.log('No arguement'));
+(process.argv[2] ? output = process.argv[2] : output = 'No arguement');
+console.log(output);
