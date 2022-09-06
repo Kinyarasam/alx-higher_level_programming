@@ -5,7 +5,7 @@
  * @params searchElement
  */
 exports.nb0ccurences = function (list, searchElement) {
-  let occurences = 0;
+  /* let occurences = 0;
   let counter = 0;
 
   while (counter < list.length) {
@@ -17,4 +17,6 @@ exports.nb0ccurences = function (list, searchElement) {
   }
 
   return occurences;
+  */
+  return list.reduce((count, current) => current === searchElement ? count + 1 : count, 0);
 };
