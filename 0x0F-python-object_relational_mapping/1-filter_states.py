@@ -18,7 +18,7 @@ if len(sys.argv) == 4:
     )
     cur = conn.cursor()
     # Grab all the states in my database starting with 'N'
-    cur.execute("SELECT * from states ORDER BYid")
+    cur.execute("SELECT * from states ORDER BY id")
     query_rows = cur.fetchall()
     for row in query_rows:
         if row[1][0] == 'N':
@@ -26,5 +26,5 @@ if len(sys.argv) == 4:
     cur.close()
     conn.close()
 else:
-    print("Usage: ./0-select_states.py <mysql username>\
+    print("Usage: ./1-filter_states.py <mysql username>\
  <mysql password> <database name>")
