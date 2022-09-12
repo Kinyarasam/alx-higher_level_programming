@@ -4,7 +4,7 @@ script that takes in an argument \
 and displays all values in the states table of hbtn_0e_0_usa \
 where name matches the argument.
 
-Usage: ./2-my_filter_states.py <mysql username> \
+Usage: ./3-my_safe_filter_states.py <mysql username> \
 <mysql password <database name> <argument>
 """
 import MySQLdb
@@ -34,5 +34,5 @@ if len(sys.argv) == 5:
     conn.close()
 
 else:
-    print("Usage: ./2-my_filter_states.py \
+    print("Usage: ./3-my_safe_filter_states.py \
 <mysql username> <mysql password <database name>")
