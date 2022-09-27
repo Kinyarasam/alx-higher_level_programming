@@ -13,7 +13,7 @@ if __name__ == "__main__":
         print("Usage: ./6-post_email.py <url> <email>")
     else:
         URL = sys.argv[1]
-        
+
         value = {
                     "email": sys.argv[2]
                 }
