@@ -5,6 +5,5 @@ const request = require('request');
 const URL_LINK = process.argv[2];
 
 request(URL_LINK, (error, response, data) => {
-  console.log(`code: ${response.statusCode}`); // Print the response status code if a response was received
-  console.log('error:', error); // Prints the error if on occurred
+  console.log('code:', response.statusCode); // Print the response status code if a response was received
 });
