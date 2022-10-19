@@ -2,9 +2,9 @@
 // Script that writes a string to a file
 
 const fs = require('fs');
-let FILE_NAME = process.argv[2];
-let TEXT = process.argv[3];
+const FILE_NAME = process.argv[2];
+const TEXT = process.argv[3];
 
 fs.writeFile(FILE_NAME, TEXT, (error) => {
   if (error) throw error;
-})
+});
